@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AlertDropdown from "@/alerts/alertDropDown";
 import DataStaxLogo from "@/assets/DataStaxLogo.svg?react";
 import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+import ZymrLogo from "@/assets/ZymrLogo.svg?react";
 import ForwardedIconComponent from "@/components/common/genericIconComponent";
 import ShadTooltip from "@/components/common/shadTooltipComponent";
 import { Button } from "@/components/ui/button";
@@ -62,13 +63,13 @@ export default function AppHeader(): JSX.Element {
         <Button
           unstyled
           onClick={() => navigate("/")}
-          className="mr-1 flex h-8 w-8 items-center"
+          className="mr-1 flex h-8 items-center"
           data-testid="icon-ChevronLeft"
         >
           {ENABLE_DATASTAX_LANGFLOW ? (
             <DataStaxLogo className="fill-black dark:fill-[white]" />
           ) : (
-            <LangflowLogo className="h-6 w-6" />
+            <ZymrLogo className="h-8" />//Changed the Logo to Zymr Logo
           )}
         </Button>
         {ENABLE_DATASTAX_LANGFLOW && (
@@ -90,12 +91,12 @@ export default function AppHeader(): JSX.Element {
         data-testid="header_right_section_wrapper"
       >
         <>
-          <Button
+          {/* <Button
             unstyled
             className="hidden items-center whitespace-nowrap pr-2 lg:inline"
           >
             <CustomLangflowCounts />
-          </Button>
+          </Button> */}
         </>
         <AlertDropdown
           notificationRef={notificationContentRef}

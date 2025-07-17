@@ -1,7 +1,7 @@
 import * as Form from "@radix-ui/react-form";
 import { useContext, useState } from "react";
 import LangflowLogo from "@/assets/LangflowLogo.svg?react";
-import { useLoginUser } from "@/controllers/API/queries/auth";
+import ZymrLogo from "@/assets/ZymrLogo.svg?react";import { useLoginUser } from "@/controllers/API/queries/auth";
 import { CustomLink } from "@/customization/components/custom-link";
 import InputComponent from "../../components/core/parameterRenderComponent/components/inputComponent";
 import { Button } from "../../components/ui/button";
@@ -66,7 +66,11 @@ export default function LoginPage(): JSX.Element {
     >
       <div className="flex h-full w-full flex-col items-center justify-center bg-muted">
         <div className="flex w-72 flex-col items-center justify-center gap-2">
-          <LangflowLogo
+          {/* <LangflowLogo
+            title="Langflow logo"
+            className="mb-4 h-10 w-10 scale-[1.5]"
+          /> */}
+          <ZymrLogo
             title="Langflow logo"
             className="mb-4 h-10 w-10 scale-[1.5]"
           />
